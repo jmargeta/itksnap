@@ -165,6 +165,7 @@ public:
     typedef itk::ImageFileWriter<TImage> WriterType;
     typename WriterType::Pointer writer = WriterType::New();
     writer->SetFileName(fname);
+    writer->SetUseCompression(true);
     if(base)
       writer->SetImageIO(base);
     writer->SetInput(image);
